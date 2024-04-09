@@ -1,0 +1,15 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+.wrapper {
+    min-height: 100vh;
+    width: 100%;
+
+    background-image: url(https://i.pinimg.com/236x/76/af/1e/76af1ebc7a22be80d9312f207a295f0c.jpg);
+    background-size: auto 65px;
+    background-repeat: no-repeat;
+    background-position: 85% 0.6%;
+}
