@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}shop{% endblock %}
+{% block body %}
+
+<style type="text/css">
+    #centerLayer {
+     margin-left: 25%;
+     width: 50%;
+     padding: 10px;
+    }
+   </style>
+
+
+<div class="container">
+{% for index in range(len) %}
+<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" id="centerLayer">
+    <div class="col p-4 d-flex flex-column position-static">
+      <strong class="d-inline-block mb-2 text-primary-emphasis">Sneakers</strong>
+      <h3 class="mb-0">{{list_sneacers[index][0][:-4]}}</h3>
+      <div class="mb-1 text-body-secondary">{{list_sneacers[index][1]}}</div>
+      <p class="card-text mb-auto">{{list_sneacers[index][2]}}</p>
+      <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+        Continue reading
+        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+      </a>
+    </div>
+    <div class="col-auto d-none d-lg-block">
+        <img width="250" height="250" src="{{ url_for('static', filename=list_sneacers[index][0]) }}"/>
+    </div>
+  </div>
+{% endfor %}
+</dib>
+{% endblock %}
