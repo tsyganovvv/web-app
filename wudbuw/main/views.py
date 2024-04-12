@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Sneacers
+
 
 def main(request):
     return render(request, 'main/index.html')
@@ -10,7 +12,8 @@ def home(request):
 
 
 def shop(request):
-    return render(request, 'main/shop.html')
+    sneacers = Sneacers.objects.all
+    return render(request, 'main/shop.html', {'sneacers': sneacers})
 
 
 def neural_network(request):
