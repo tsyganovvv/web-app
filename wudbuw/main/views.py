@@ -1,14 +1,25 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from .models import Sneacers
+from .models import User
 from django.views.decorators.csrf import csrf_exempt
-
 
 @csrf_exempt
 def reg(request):
+    error = ''
     if request.method == 'POST':
-        return redirect('/home')
-    return render(request, 'main/index.html')
+        password = request.POST['password']
+        mail = request.POST['address']
+        try:
+            User.objects.get(mail=mail, password=password)
+            return redirect('/home')
+        except Exception:
+            try:
+                User.objects.get(mail=mail)
+                error == 'Error'
+            except Exception:
+                User.objects.create(mail=mail, password=password)
+                return redirect('/home')
+    return render(request, 'main/index.html', {'error': error})
 
 
 def home(request):
