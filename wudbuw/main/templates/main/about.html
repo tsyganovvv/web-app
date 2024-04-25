@@ -1,75 +1,96 @@
-{% extends 'main/base.html' %}
-{% block title %}about{% endblock %}
-{% block body %}
-
-
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>about</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="{% static "main/css/style.css" %}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" />
+</head>
 <style type="text/css">
+    #intro {
+        height: 800px;
+    }
+</style>
+   <style type="text/css">
     #centerLayer {
-     margin-left: 40%;
+     margin-left: 45%;
      width: 50%;
      padding: 10px;
     }
-   </style>
-
-
+</style>
+<body>
+<div class="intro" id="intro">
+      <ul class="nav nav-pills" style="height:250px;">
+        <li class="nav-item" style="font-size:25px;"><a href="/home" class="nav-link" aria-current="page" style="padding-left: 1400px">Home</a></li>
+        <li class="nav-item" style="font-size:25px;"><a href="/shop" class="nav-link">Shop</a></li>
+        <li class="nav-item" style="font-size:25px;"><a href="/neural_network" class="nav-link">Neural network</a></li>
+        <li class="nav-item" style="font-size:25px;"><a href="/about" class="nav-link">About</a></li>
+      </ul>
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <span style="font-size:80px; color: white;margin-left: 10%;">wudbuw</span>
+      </a>
+</div>
 <div class="container py-3">
-
-<h1 class="display-4 fw-normal text-body-emphasis" id="centerLayer">About</h1>
-<p class="fs-5 text-body-secondary" >This project, edited by Vladimir Tsyganov, was created to simplify the selection of sneaker model rules.</p>
-
-
-  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-    <div class="col">
-      <div class="card mb-4 rounded-3 shadow-sm">
-        <div class="card-header py-3">
-          <h4 class="my-0 fw-normal">Telegram</h4>
+    <h1 class="display-4 fw-normal text-body-emphasis" id="centerLayer">About</h1>
+    <p class="fs-5 text-body-secondary" >This project, edited by Vladimir Tsyganov, was created to simplify the selection of sneaker model rules.</p>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Telegram</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">Tsyganov<small class="text-body-secondary fw-light">/wudbuw</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>for</li>
+                <li>communication</li>
+                <li>and</li>
+                <li>entertainment</li>
+              </ul>
+              <button onclick="document.location='https://t.me/wudbuw'" type="button" class="w-100 btn btn-lg btn-outline-primary">Telegram</button>
+            </div>
+          </div>
         </div>
-        <div class="card-body">
-          <h1 class="card-title pricing-card-title">Tsyganov<small class="text-body-secondary fw-light">/wudbuw</small></h1>
-          <ul class="list-unstyled mt-3 mb-4">
-            <li>for</li>
-            <li>communication</li>
-            <li>and</li>
-            <li>entertainment</li>
-          </ul>
-          <button onclick="document.location='https://t.me/wudbuw'" type="button" class="w-100 btn btn-lg btn-outline-primary">Telegram</button>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Gmail</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">Tsyganov<small class="text-body-secondary fw-light">/tsyganov.vv</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>support</li>
+                <li>on</li>
+                <li>various</li>
+                <li>issues</li>
+              </ul>
+              <button onclick="document.location='mailto:tsyganov.vv5698@gmail.com'" type="button" class="w-100 btn btn-lg btn-primary">contact us</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">GitHub</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">Tsyganov<small class="text-body-secondary fw-light">/tsyganovvv</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>to offer</li>
+                <li>various ideas</li>
+                <li>to improve</li>
+                <li>the project</li>
+              </ul>
+              <button onclick="document.location='https://github.com/tsyganovvv'" type="button" class="w-100 btn btn-lg btn-primary">GitHub</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card mb-4 rounded-3 shadow-sm">
-        <div class="card-header py-3">
-          <h4 class="my-0 fw-normal">Gmail</h4>
-        </div>
-        <div class="card-body">
-          <h1 class="card-title pricing-card-title">Tsyganov<small class="text-body-secondary fw-light">/tsyganov.vv</small></h1>
-          <ul class="list-unstyled mt-3 mb-4">
-            <li>support</li>
-            <li>on</li>
-            <li>various</li>
-            <li>issues</li>
-          </ul>
-          <button onclick="document.location='mailto:tsyganov.vv5698@gmail.com'" type="button" class="w-100 btn btn-lg btn-primary">contact us</button>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card mb-4 rounded-3 shadow-sm border-primary">
-        <div class="card-header py-3 text-bg-primary border-primary">
-          <h4 class="my-0 fw-normal">GitHub</h4>
-        </div>
-        <div class="card-body">
-          <h1 class="card-title pricing-card-title">Tsyganov<small class="text-body-secondary fw-light">/tsyganovvv</small></h1>
-          <ul class="list-unstyled mt-3 mb-4">
-            <li>to offer</li>
-            <li>various ideas</li>
-            <li>to improve</li>
-            <li>the project</li>
-          </ul>
-          <button onclick="document.location='https://github.com/tsyganovvv'" type="button" class="w-100 btn btn-lg btn-primary">GitHub</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-{% endblock %}
+<p class="text-center text-body-secondary">© 2024 designed by <a href="https://t.me/wudbuw">TsyganovVV</a></p>
+<script src={% static 'main/js/three.min.js.js' %}></script>
+<script src={% static "main/js/vanta.globe.min.js.js" %}></script>
+<script src={% static "main/js/about.js" %}></script>
+</body>
+</html>
